@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Suggestions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .containeragg {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, select {
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        } */
+
+        #output {
+            margin-top: 20px;
+        }
+
+        .button-2 {
+    background-color: transparent;
+    border: 2px solid #1A1A1A;
+    border-radius: 5px;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 4px;
+    text-align: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    width: 150px;
+    margin-left: 70px;
+    margin-top: 35px;
+
+  }
+  
+  .button-2:disabled {
+    pointer-events: none;
+  }
+  
+  .button-2:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .button-2:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+    </style>
+</head>
+
+<body>
+    <div class="containeragg">
+        <h1>Agro Suggestions</h1>
+        <form id="agroForm">
+            <label for="cropCategory">Select Crop Category:</label>
+            <select id="cropCategory" name="cropCategory" required>
+                <option value="food">Food Crops</option>
+                <option value="feed">Feed Crops</option>
+                <option value="fiber">Fiber Crops</option>
+                <option value="oil">Oil Crops</option>
+                <option value="ornamental">Ornamental Crops</option>
+                <option value="industrial">Industrial Crops</option>
+            </select>
+
+            <label for="crop">Select Crop:</label>
+            <select id="crop" name="crop" required>
+                <!-- Add sample crops for each category -->
+                <optgroup label="Food Crops">
+                    <option value="vegetable">Vegetable</option>
+                    <option value="fruit">Fruit</option>
+                    <option value="banana">Banana</option>
+                    <option value="strawberry">Strawberry</option>
+                    <option value="apple">Apple</option>
+                </optgroup>
+                <optgroup label="Feed Crops">
+                    <option value="alfalfa">Alfalfa</option>
+                    <option value="clover">Clover</option>
+                    <option value="ryegrass">Ryegrass</option>
+                </optgroup>
+                <optgroup label="Fiber Crops">
+                    <option value="cotton">Cotton</option>
+                    <option value="flax">Flax</option>
+                    <option value="hemp">Hemp</option>
+                    <option value="jute">Jute</option>
+                    <option value="ramie">Ramie</option>
+                </optgroup>
+                <optgroup label="Oil Crops">
+                    <option value="soybean">Soybean</option>
+                    <option value="canola">Canola</option>
+                    <option value="sunflower">Sunflower</option>
+                    <option value="olive">Olive</option>
+                    <option value="peanut">Peanut</option>
+                </optgroup>
+                <optgroup label="Ornamental Crops">
+                    <option value="roses">Roses</option>
+                    <option value="tulips">Tulips</option>
+                    <option value="daffodils">Daffodils</option>
+                    <option value="lilies">Lilies</option>
+                    <option value="marigolds">Marigolds</option>
+                </optgroup>
+                <optgroup label="Industrial Crops">
+                    <option value="cotton">Cotton</option>
+                    <option value="jute">Jute</option>
+                    <option value="hemp">Hemp</option>
+                    <option value="sisal">Sisal</option>
+                    <option value="kenaf">Kenaf</option>
+                </optgroup>
+            </select>
+
+            <label for="soilType">Soil Type:</label>
+            <input type="text" id="soilType" name="soilType" required>
+
+            <label for="climate">Climate:</label>
+            <input type="text" id="climate" name="climate" required>
+
+            <button type="button" onclick="getAgroSuggestions()" class="button-2">Get Suggestions</button>
+        </form>
+
+        <div id="output"></div>
+
+        <script>
+            function getAgroSuggestions() {
+                // Get form data
+                var cropCategory = document.getElementById('cropCategory').value;
+                var crop = document.getElementById('crop').value;
+                var soilType = document.getElementById('soilType').value;
+                var climate = document.getElementById('climate').value;
+
+                // Simulate suggestions (you can replace this with actual logic)
+                var suggestions = [
+                    'Use organic fertilizer for better yield.',
+                    'Ensure proper irrigation for healthy crops.',
+                    'Consider crop rotation for soil health.',
+                    'Protect crops from pests and diseases.',
+                ];
+
+                // Display suggestions
+                var outputDiv = document.getElementById('output');
+                outputDiv.innerHTML = '<h3>Suggestions for ' + cropCategory + ' - ' + crop + '</h3>';
+                suggestions.forEach(function (suggestion) {
+                    var p = document.createElement('p');
+                    p.textContent = suggestion;
+                    outputDiv.appendChild(p);
+                });
+            }
+        </script>
+    </div>
+</body>
+
+</html>

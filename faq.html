@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F0F2F5;
+            /* Light grey background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .accordion-container {
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .accordion-item {
+            background-color: #FFFFFF;
+            /* White background for items */
+            border: 1px solid #E0E0E0;
+            /* Light border */
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            /* Softer shadow */
+        }
+
+        .accordion-header {
+            background-color: #3fa940;
+            /* Soft purple */
+            color: #FFFFFF;
+            /* White text */
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 8px 8px 0 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background-color: #44b882;
+            /* Darker shade of purple */
+        }
+
+        .accordion-content {
+            background-color: #FAFAFA;
+            /* Very light grey for content */
+            overflow: hidden;
+            padding: 0 15px;
+            max-height: 0;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content p {
+            margin: 15px 0;
+            line-height: 1.5;
+        }
+
+        .icon {
+            transition: transform 0.3s ease;
+        }
+
+        .active .icon {
+            transform: rotate(45deg);
+        }
+
+        h1 {
+            font-size: 30px;
+            text-transform: uppercase;
+            font-family: 'Gambetta', serif;
+            letter-spacing: -3px;
+            transition: 700ms ease;
+            font-variation-settings: "wght" 311;
+            margin-bottom: 0.8rem;
+            color: rgb(218, 205, 65);
+            outline: none;
+            text-align: center;
+        }
+
+        h1:hover {
+            font-variation-settings: "wght" 582;
+            letter-spacing: 1px;
+        }
+
+        .button {
+            background-color: transparent;
+            border: 2px solid #1A1A1A;
+            border-radius: 5px;
+            color: #3B3B3B;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 16px;
+            font-weight: 600;
+            padding: 8px 4px;
+            text-align: center;
+            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+            width: 150px;
+            margin-left:220px;
+            margin-top: 50px;
+
+        }
+
+        .button:disabled {
+            pointer-events: none;
+        }
+
+        .button:hover {
+            color: #fff;
+            background-color: #1A1A1A;
+            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+            transform: translateY(-2px);
+        }
+
+        .button:active {
+            box-shadow: none;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accordion-container">
+        <h1> Frequently Asked Question </h1>
+
+        <div class="accordion-item">
+            <button class="accordion-header">
+                What is Agmarknet portal about? <span class="icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <p>Agmarknet portal is a govt. of India portal on agricultural marketing backed by a wide area
+                    information network connecting agricultural markets, State Marketing boards/Directorates and also
+                    providing linkages to the websites of the important National and International Organisations.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">
+                What are the contents of Agmarknet Portal? <span class="icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <p>The Portal provides both static and dynamic information relating to agricultural marketing in India .
+                    The static information is about infrastructure- related (Storage, warehousing, Cold Storage, grading
+                    and packing facilities).</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">
+                What types of daily data are disseminated to the Portal? <span class="icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <p>The portal provides easy access to commodity-wise, variety-wise daily prices and arrivals information
+                    of more than 2000 varieties and about 300 commodities from the wholesale markets spread all over the
+                    country.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">
+                What is the method of collection and dissemination of data? <span class="icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <p>The portal is run by the Directorate of Marketing & Inspection with the technical assistance of NIC
+                    as consultant on Turn-key basis. The computer facility has been provided at different markets at
+                    grassroot level and connected to internet with DMI Hqrs</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">
+                How many markets have been covered so far under this project? <span class="icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <p>So far 3245 markets across the country have been covered under the project as on 31 March 2015.
+                    Question: Is there any linkages of other organizations with this website? Yes, CODEX, FAO,APEDA,
+                    Trade Online.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header">
+                Who are the main users of Agmarknet Website?<span class="icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <p>The main users of Agmarknet website are Farmers , Traders, Research Institutes, Exporters, Commodity
+                    Boards/Various Government Departments, ECO-STAT. The linkages are also provided to Kisan, Krishi
+                    World, Indian Agro-net, Agriwatch, Indian Dairy Industry, Agro-India, Forwards Markets Commission.
+                </p>
+            </div>
+            <button style="text-align: center;" class="button" onclick="document.location = 'main page.html'" type="button" > back</button>
+
+        </div>
+    </div>
+    
+
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionContent = button.nextElementSibling;
+
+                button.classList.toggle('active');
+
+                if (button.classList.contains('active')) {
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                } else {
+                    accordionContent.style.maxHeight = 0;
+                }
+
+                // Close other open accordion items
+                document.querySelectorAll('.accordion-header').forEach(otherButton => {
+                    if (otherButton !== button) {
+                        otherButton.classList.remove('active');
+                        otherButton.nextElementSibling.style.maxHeight = 0;
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+.page6{
+    height: 100vh;
+    background-image:url("image/barley-2117454_1280.jpg");
+    background-size:cover;
+    background-repeat:no-repeat ;
+    /* background-blend-mode: multiply ; */
+    display: flex;
+    justify-content: space-evenly;
+    /* text-align: center; */
+    
+    }
+    
+.txt{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(26, 22, 22);
+    margin-top: 50px;
+    margin-left: 300px;
+    font-size: xx-large;
+    /* padding-left: 400px; */
+}
+
+div{
+    display: inline-block;
+    /* justify-content: space-evenly; */
+}
+.lbox{
+    height: 350px;
+    width: 300px;
+    background-color:rgba(244, 247, 243, 0.806);
+    margin-left: -720px;
+    margin-top: 150px;
+    border-radius: 3px;
+    box-shadow: 10px 10px 20px 2px rgba(209, 216, 218, 0.628);
+    /* display: flex; */
+}
+
+.fbox{
+    height: 350px;
+    width: 300px;
+    background-color: rgba(244, 247, 243, 0.806);
+    margin-right: 50px;
+    margin-top: 150px;
+    border-radius: 3px;
+    box-shadow: 10px 10px 20px 2px rgba(209, 216, 218, 0.628);
+    /* display: flex; */
+
+}
+.l-img{
+    height: 150px;
+    width: 300px;
+    background-image: url("clinical-laboratory-technician-1200x900.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.l-img:hover{
+    opacity: 0.5;
+}
+.f-img{
+    height: 150px;
+    width: 300px;
+    background-image: url("image/faq.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.f-img:hover{
+    opacity: 0.5;
+}
+.l-text{
+    font-weight: bolder;
+    text-align: center;
+    color: gray;
+    font-family: Copperplate Gothic Light;
+}
+.p-text{
+    text-align: center;
+    font-weight:800;
+}
+
+  .button-1 {
+    background-color: transparent;
+    border: 2px solid #1A1A1A;
+    border-radius: 5px;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 4px;
+    text-align: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    width: 150px;
+    margin-left: 75px;
+    margin-top: 5px;
+
+  }
+  
+  .button-1:disabled {
+    pointer-events: none;
+  }
+  
+  .button-1:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .button-1:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+
+  .button-2 {
+    background-color: transparent;
+    border: 2px solid #1A1A1A;
+    border-radius: 5px;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 4px;
+    text-align: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    width: 150px;
+    margin-left: 75px;
+    margin-top: 35px;
+
+  }
+  
+  .button-2:disabled {
+    pointer-events: none;
+  }
+  
+  .button-2:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .button-2:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+
+
+
+
+
+
+
+  .sec2 {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F0F2F5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.accordion-container {
+    width: 80%;
+    max-width: 600px;
+}
+
+.accordion-item {
+    background-color: #FFFFFF;
+    /* White background for items */
+    border: 1px solid #E0E0E0;
+    /* Light border */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Softer shadow */
+}
+
+.accordion-header {
+    background-color: #3fa940;
+    /* Soft purple */
+    color: #FFFFFF;
+    /* White text */
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #44b882;
+    /* Darker shade of purple */
+}
+
+.accordion-content {
+    background-color: #FAFAFA;
+    /* Very light grey for content */
+    overflow: hidden;
+    padding: 0 15px;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content p {
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.active .icon {
+    transform: rotate(45deg);
+}
+
+h1 {
+    font-size: 50px;
+    /* text-transform: uppercase; */
+    font-family: 'Gambetta', serif;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: rgb(218, 205, 65);
+    outline: none;
+    text-align: center;
+}
+
+h1:hover {
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+

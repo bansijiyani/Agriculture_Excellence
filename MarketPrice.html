@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Market</title>
+    <style>
+        .sec3 {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-family: Copperplate Gothic Light;
+            font-weight: 800;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product img:hover {
+            transform: scale(1.1);
+        }
+
+        .price-container {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .price {
+            color: #333;
+            font-size: 18px;
+        }
+
+        .button-2 {
+    background-color: transparent;
+    border: 2px solid #1A1A1A;
+    border-radius: 5px;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 4px;
+    text-align: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    width: 150px;
+    margin-left: 330px;
+    margin-top: 35px;
+
+  }
+  
+  .button-2:disabled {
+    pointer-events: none;
+  }
+  
+  .button-2:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .button-2:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        Agriculture Market
+    </header>
+
+    <div class="container">
+        <div class="product" onclick="showPrice('Grains')">
+            <img src="image/grains.jpg" alt="Grains">
+            <div class="price-container" id="GrainsPrice">
+                <div class="price">Live Price: ₹ 300.00/kg</div>
+            </div>
+        </div>
+
+        <div class="product" onclick="showPrice('Vegetables')">
+            <img src="image/vegetables.jpg" alt="Vegetables">
+            <div class="price-container" id="VegetablesPrice">
+                <div class="price">Live Price: ₹ 100.00/kg</div>
+            </div>
+        </div>
+
+        <div class="product" onclick="showPrice('Oil')">
+            <img src="image/oil.jpg" alt="Oil">
+            <div class="price-container" id="OilPrice">
+                <div class="price">Live Price: ₹ 110.00/liter</div>
+            </div>
+        </div>
+
+        <div class="product" onclick="showPrice('Fruits')">
+            <img src="image/fruits.jpg" alt="Fruits">
+            <div class="price-container" id="FruitsPrice">
+                <div class="price">Live Price: ₹ 200.00/kg</div>
+            </div>
+        </div>
+
+        <div class="product" onclick="showPrice('Cotton')">
+            <img src="image/cotton.jpg" alt="Cotton">
+            <div class="price-container" id="CottonPrice">
+                <div class="price">Live Price: ₹ 200.00/kg</div>
+            </div>
+        </div>
+
+        <div class="product" onclick="showPrice('Pulses')">
+            <img src="image/pulses.jpg" alt="Pulses">
+            <div class="price-container" id="PulsesPrice">
+                <div class="price">Live Price: ₹ 400.00/kg</div>
+            </div>
+        </div>
+
+        <div class="product" onclick="showPrice('Rice')">
+            <img src="image/rice.jpg" alt="Rice">
+            <div class="price-container" id="RicePrice">
+                <div class="price">Live Price: ₹ 150.00/kg</div>
+            </div>
+        </div>
+
+        <div class="product" onclick="showPrice('Sugarcane')">
+            <img src="image/sugarcane.jpg" alt="Sugarcane">
+            <div class="price-container" id="SugarcanePrice">
+                <div class="price">Live Price: ₹ 100.00/kg</div>
+            </div>
+        </div>
+
+        <div class="product" onclick="showPrice('Coffee')">
+            <img src="image/coffee.jpg" alt="Coffee">
+            <div class="price-container" id="CoffeePrice">
+                <div class="price">Live Price: ₹ 1500.00/kg</div>
+            </div>
+        </div>
+
+        <div class="product" onclick="showPrice('Tea')">
+            <img src="image/tea.jpg" alt="Tea">
+            <div class="price-container" id="TeaPrice">
+                <div class="price">Live Price: ₹ 500.50/kg</div>
+            </div>
+        </div>
+
+        <div class="product" onclick="showPrice('Jute')">
+            <img src="image/jute.jpg" alt="Jute">
+            <div class="price-container" id="JutePrice">
+                <div class="price">Live Price: ₹ 100.00/kg</div>
+            </div>
+        </div>
+
+        <button class="button-2" onclick="document.location='main page.html'" > Go Back To Home Page </button>
+
+    </div>
+
+    <script>
+        function showPrice(product) {
+            
+            var priceContainers = document.querySelectorAll('.price-container');
+            priceContainers.forEach(function (container) {
+                container.style.display = 'none';
+            });
+            var selectedContainer = document.getElementById(product + 'Price');
+            selectedContainer.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
